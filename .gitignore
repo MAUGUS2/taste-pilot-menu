@@ -1,0 +1,22 @@
+# Node
+node_modules/
+.pnpm/
+
+# Build outputs
+apps/menu-web/.next/
+packages/**/dist/
+
+# Turborepo
+.turbo/
+turbo.json
+
+# Logs
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor
+.vscode/
+.DS_Store
+.env.local
