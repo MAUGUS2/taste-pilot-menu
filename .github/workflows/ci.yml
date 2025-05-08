@@ -46,5 +46,18 @@ jobs:
       - name: Lint
         run: pnpm lint
 
+      - name: Run tests
+        id: tests
+        run: pnpm test
+      
+      - name: Quality Gate - Test Results
+        if: always() && steps.tests.outcome != 'skipped'
+        run: |
+          if [ "${{ steps.tests.outcome }}" != "success" ]; then
+            echo "Tests failed or had issues"
+            exit 1
+          fi
+          echo "Tests passed successfully"
+
       - name: Build
         run: pnpm build 
