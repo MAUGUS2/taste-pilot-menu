@@ -24,7 +24,7 @@ _Execution map synced with the Blueprint. **Sprints = 2 weeks**. Each phase = on
 
 ---
 
-## P0 – Foundation (🔧 Sprint 0) - COMPLETED ✅
+## P0 – Foundation (🔧 Sprint 0) - CURRENT SPRINT
 
 🚩 **Milestone goal**: Dev environment & CI skeleton.
 
@@ -33,30 +33,28 @@ _Execution map synced with the Blueprint. **Sprints = 2 weeks**. Each phase = on
 | P0‑T1 | 🛠️    | Monorepo bootstrap (pnpm + Turborepo, Prettier, ESLint, Husky) | ✅     | Completed with pnpm workspaces, Turborepo, Prettier, Husky |
 | P0‑T2 | 🏗️    | App scaffold (Next 14, Tailwind, r3f, drei, GSAP, Zustand)     | ✅     | Next.js app with R3F cube demo running                     |
 | P0‑T3 | 🛠️    | GitHub Actions CI (lint → format → build)                      | ✅     | Basic CI pipeline implemented                              |
-| P0‑T4 | 🧪    | Quality gate (fail if > 2 % tests regress)                     | ✅     | Implementado testes básicos com Vitest                     |
+| P0‑T4 | 🧪    | Quality gate (fail if > 2 % tests regress)                     | ⏳     | Need to add testing infrastructure                         |
 
-📈 _Current Status_: Base de desenvolvimento configurada. Ambiente de desenvolvimento funcionando corretamente com CI/CD. Testes unitários configurados e funcionando para componentes React + R3F. GitFlow implementado com branches main/develop.
-
----
-
-## P1 – 3‑D Carousel MVP (🌀 Sprint 1) - CURRENT SPRINT 🔄
-
-🚩 **Milestone goal**: Interactive carousel of menu items.
-
-| Key   | Track | Task                                                       | Status | Notes                                                                      |
-| ----- | ----- | ---------------------------------------------------------- | ------ | -------------------------------------------------------------------------- |
-| P1‑T1 | 🎨    | Create low‑poly burger GLB (≤ 500 kB after Draco+KTX2)     | ⏳     | Placeholders temporários usando cubes coloridos                            |
-| P1‑T2 | 🏗️    | Build Carousel component (polar positions, GSAP Draggable) | ✅     | Componente implementado com posicionamento em círculo e animações GSAP     |
-| P1‑T3 | 🏗️    | Route on select (`/item/:id`)                              | 🟡     | Estrutura básica criada, mas navegação ainda não está totalmente funcional |
-| P1‑T4 | 🧪    | Perf validation (Lighthouse ≥ 80)                          | ⏳     | Pendente                                                                   |
-
-📈 _Current Status_: Carrossel 3D implementado com posicionamento polar e interações básicas. Animações GSAP funcionando corretamente. Seleção de item funcionando com feedback visual. Bugs iniciais corrigidos (Draggable, HTML no Canvas).
+📈 _Current Status_: Basic dev environment and architecture established. Build system and CI pipeline functional. 3/4 tasks completed.
 
 ⏭️ _Next Steps_:
 
-- Criar os modelos 3D reais para substituir os placeholders
-- Finalizar a navegação para a página de detalhes do item
-- Realizar testes de performance para validar a milestone
+- Add testing infrastructure
+- Create GitHub issues for P1 tasks
+- Set up milestone for P1
+
+---
+
+## P1 – 3‑D Carousel MVP (🌀 Sprint 1) - NEXT UP
+
+🚩 **Milestone goal**: Interactive carousel of menu items.
+
+| Key   | Track | Task                                                       | Prep Work Needed                                           | Priority |
+| ----- | ----- | ---------------------------------------------------------- | ---------------------------------------------------------- | -------- |
+| P1‑T1 | 🎨    | Create low‑poly burger GLB (≤ 500 kB after Draco+KTX2)     | Research 3D modeling options, Draco compression            | HIGH     |
+| P1‑T2 | 🏗️    | Build Carousel component (polar positions, GSAP Draggable) | Review GSAP Draggable docs, experiment with 3D positioning | HIGH     |
+| P1‑T3 | 🏗️    | Route on select (`/item/:id`)                              | Set up Next.js app routing                                 | MEDIUM   |
+| P1‑T4 | 🧪    | Perf validation (Lighthouse ≥ 80)                          | Prepare performance measurement baseline                   | LOW      |
 
 📈 _Target Bundle_: ≤ 150 kB gz.
 
