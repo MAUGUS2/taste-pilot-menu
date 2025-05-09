@@ -20,3 +20,6 @@ yarn-error.log*
 .vscode/
 .DS_Store
 .env.local
+
+# localDev
+TPMenu3D_Learning/
